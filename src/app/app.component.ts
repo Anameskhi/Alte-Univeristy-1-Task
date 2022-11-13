@@ -7,4 +7,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'First_exercise';
+  isActive: boolean = true
+  
+  status: string = "success"
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  changeStatus(){
+    this.isActive = !this.isActive
+    if(this.isActive === true){
+      
+      this.status = 'success'
+    }else{
+     
+      this.status = 'warning'
+    }
+  }
 }
